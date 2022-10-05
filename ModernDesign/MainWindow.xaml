@@ -4,13 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ModernDesign"
+        xmlns:viewmodels="clr-namespace:ModernDesign.MVVM.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="920"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True">
-    <Border Background="DarkBlue" CornerRadius="10">
+
+
+    <Window.DataContext>
+        <viewmodels:MainViewModel />
+    </Window.DataContext>
+
+    <!--<Border Background="DarkBlue" CornerRadius="10">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
@@ -22,7 +29,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <TextBlock Text="Lucas" 
+            <TextBlock Text="SmartApp" 
                    VerticalAlignment="Center" 
                    HorizontalAlignment="Left"
                    Foreground="White" 
@@ -61,5 +68,16 @@
                              Margin="10"/>
 
         </Grid>
-    </Border>
+        --><!--<Border Background="#333333" CornerRadius="12">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <ContentControl Grid.Row="0" Content="{Binding CurrentView}" />
+            <components:MenuComponent Grid.Row="1" Margin="0 -140 0 0" />
+        </Grid>--><!--
+
+    </Border>-->
 </Window>
